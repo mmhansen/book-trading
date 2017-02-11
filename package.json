@@ -1,0 +1,55 @@
+{
+  "name": "book-trading",
+  "version": "1.2.0",
+  "description": "A simple voting platform.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "debug": "^2.6.0",
+    "env-cmd": "^4.0.0",
+    "express": "^4.14.1",
+    "express-jwt": "^5.1.0",
+    "mongoose": "^4.8.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.5",
+    "corp-semantic-release": "^3.1.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.1.2",
+    "supertest": "^3.0.0",
+    "ava": "^0.18.1",
+    "tape-watch": "^2.2.4"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "test": "env-cmd test ava --watch",
+    "test:once": "env-cmd test ava",
+    "semantic-release": "corp-semantic-release",
+    "start": "env-cmd development nodemon src --watch src",
+    "coverage": "nyc env-cmd ava",
+    "report-coverage": "env-cmd test nyc report --reporter=lcov > coverage.lcov && codecov -t 3cfcdefa-220d-4a99-aa69-5e7fbfb1ca02"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmhansen/book-trading.git"
+  },
+  "keywords": [],
+  "author": "Michael Hansen <hansen.mmb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmhansen/book-trading/issues"
+  },
+  "homepage": "https://github.com/mmhansen/book-trading#readme",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
