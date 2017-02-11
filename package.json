@@ -33,7 +33,7 @@
     "test:once": "env-cmd test ava",
     "semantic-release": "corp-semantic-release",
     "start": "env-cmd development nodemon src --watch src",
-    "coverage": "nyc env-cmd ava",
+    "coverage": "nyc env-cmd test ava",
     "report-coverage": "env-cmd test nyc report --reporter=lcov > coverage.lcov && codecov -t 3cfcdefa-220d-4a99-aa69-5e7fbfb1ca02"
   },
   "repository": {
