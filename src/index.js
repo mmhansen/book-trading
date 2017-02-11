@@ -17,6 +17,14 @@ app.get('/', (req, res, next) => {
     })
 })
 
+app.get('/*', (req, res, next) => {
+  res
+    .status(404)
+    .json({
+      body: 'Not found.'
+    })
+})
+
 app.listen(config.port, () => {
   http('server running on port: ' + config.port)
 })
